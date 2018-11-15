@@ -15,5 +15,11 @@ def cat1_profile(id):
 	a= get_cat(id)
 	return render_template('cat.html', a = a)
 
+@app.route('/addme')
+def add_me(id):
+	add = create_cat(id)
+	return render_template('addme.html')
+
+
 if __name__ == '__main__':
 	app.run(debug = True)
